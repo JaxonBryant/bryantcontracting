@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Bryant Contracting</title>
+<title>Bryant Contracting: Home</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -10,10 +10,21 @@ body {
 }
     
 .header {
-padding: 80px; /* Some padding */
-text-align: center; /* -- center the text */
-background: #ffffff; /* -- white background */
-color: #0F5010; /* green text color */
+    padding: 20px; /* Some padding */
+    background: #ffffff; /* White background */
+    color: #0F5010; /* Green text color */
+    display: flex; /* Added */
+    justify-content: space-between; /* Added */
+    align-items: center; /* Added */
+}
+
+.logo {
+    flex-shrink: 0; /* Added */
+    margin-right: 20px; /* Added */
+}
+
+.text {
+    text-align: right; /* Moves the text to the right */
 }
 
 /* Increase the font size of the <h1> element */
@@ -101,8 +112,13 @@ color: #0F5010; /* green text color */
 
 
 <div class="header">
-    <h1>Bryant Contracting</h1>
-    <p>027 215 4213</p>
+    <div class="logo">
+        <img src="https://live.staticflickr.com/65535/53710731185_fe74e26743_o.jpg" alt="Bryant Contracting">
+    </div>
+    <div class="text">
+        <h1>027 215 4213</h1>
+        <h3>nik@bryantcontracting.co.nz</h3>
+    </div>
 </div>
 
 <div class="navbar">

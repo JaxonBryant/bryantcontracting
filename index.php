@@ -10,17 +10,17 @@ body {
 }
     
 .header {
-    padding: 20px; /* Some padding */
+    padding: 10px; /* Some padding */
     background: #ffffff; /* White background */
     color: #0F5010; /* Green text color */
     display: flex; /* Added */
     justify-content: space-between; /* Added */
-    align-items: center; /* Added */
+    align-items: center; /* Moves content in the centre */
 }
 
 .logo {
-    flex-shrink: 0; /* Added */
-    margin-right: 20px; /* Added */
+    flex-shrink: 0; /* Courtesy of ChatGPT */
+    margin-right: 20px; 
 }
 
 .text {
@@ -97,7 +97,24 @@ body {
   .navbar a {
     float: none;
     width: 100%;
-  }
+    }
+}
+    
+/* Media query for mobile screens */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to center */
+    }
+    .text {
+        text-align: center; /* Align text to center */
+        margin-top: 10px; /* Add some space between image and text */
+    }
+    .logo {
+        margin-right: 0; /* Remove right margin to align image with text */
+        margin-left: 31px; /* Manually move the logo to the right to visually align with text */
+        margin-bottom: 10px; /* Add margin to center vertically */
+    }
 }
     
 .footer {
@@ -113,7 +130,7 @@ body {
 
 <div class="header">
     <div class="logo">
-        <img src="https://live.staticflickr.com/65535/53710731185_fe74e26743_o.jpg" alt="Bryant Contracting">
+        <img src="https://live.staticflickr.com/65535/53710731185_fe74e26743_o.jpg" alt="Bryant Contracting" style="width: 90%;">
     </div>
     <div class="text">
         <h1>027 215 4213</h1>

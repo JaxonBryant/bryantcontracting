@@ -1,8 +1,9 @@
 <style>
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: sans-serif;
 }
-    
+
+/* style the header */
 .header {
     padding: 10px; /* Some padding */
     background: #ffffff; /* White background */
@@ -13,17 +14,35 @@ body {
 }
 
 .logo {
-    flex-shrink: 0; /* Courtesy of ChatGPT */
+    flex-shrink: 0; /* IDK what this does: Courtesy of ChatGPT */
     margin-right: 20px; 
 }
 
 .text {
-    text-align: right; /* Moves the text to the right */
+    text-align: right; /* Keeps the text to the right */
+    background-color: #f1f1f1 !important; /* Grey background color */
 }
 
 /* Increase the font size of the <h1> element */
 .header h1 {
     font-size: 40px;
+}
+
+/* Header: Responsive layout - when the screen is less than 768px wide, make the logo and header text stack on top of each other instead of next to each other. This may be changed in the future */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Align items to center */
+    }
+    .text {
+        text-align: center; /* Align text to center */
+        margin-top: 10px; /* Add some space between image and text */
+        background-color: #f1f1f1; /* Grey background color */
+    }
+    .logo {
+        margin-right: 31px; /* Move the logo to the right by 31 pixels, to make it visually aligned */
+        margin-bottom: 10px; /* Add margin to center vertically */
+    }
 }
     
 /* Style the top navigation bar */
@@ -52,7 +71,15 @@ body {
     background-color: #ddd; /* Grey background color */     /* NTS: Change this color */
     color: black; /* Black text color */
 }
-    
+
+/* Navbar: Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+    }
+}
+   
 /* Ensure proper sizing */
 * {
     box-sizing: border-box;
@@ -83,31 +110,6 @@ body {
 @media screen and (max-width: 700px) {
     .row {
     flex-direction: column;
-    }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-    }
-}
-    
-/* Media query for mobile screens */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Align items to center */
-    }
-    .text {
-        text-align: center; /* Align text to center */
-        margin-top: 10px; /* Add some space between image and text */
-    }
-    .logo {
-        margin-right: 0; /* Remove right margin to align image with text */
-        margin-left: 31px; /* Manually move the logo to the right to visually align with text */
-        margin-bottom: 10px; /* Add margin to center vertically */
     }
 }
     

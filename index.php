@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- Add fonts across the whole website -->
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        @import url('https://fonts.googleapis.com/css2 family=Inter:wght@100..900&display=swap');
         <link rel="stylesheet" href="css/style.css">
     <!-- page setup -->
     <title>Bryant Contracting: Home</title>

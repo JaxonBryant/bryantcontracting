@@ -1,8 +1,8 @@
 <style>
 
-@import url()
-body {
-    font-family: 'Inter', 'Roboto', 'Arial', sans-serif;
+@import url() /* This bit of code (regarding fonts) probably needs to be fixed */
+.body {
+    font-family: "Inter", Roboto, Arial, sans-serif;
     line-height: 1.3;
 }
 
@@ -181,6 +181,57 @@ nav a:hover {
         margin: 0 auto 20px auto;
     }
 }
+/*-------------------------------------------------------------------------*/
+
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*---------------------------------------------------------------------------*/
+
     
 .footer {
     padding: 20px; /* Some padding */

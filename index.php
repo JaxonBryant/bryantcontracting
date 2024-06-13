@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Add fonts across the whole website -->
-        @import url('https://fonts.googleapis.com/css2 family=Inter:wght@100..900&display=swap');
-        <link rel="stylesheet" href="css/style.css">
+    <!-- Apply fonts. The following code is in comment form because IDK how to make it work -->
+    
+        <!--@import url('https://fonts.googleapis.com/css2 family=Inter:wght@100..900&display=swap');
+        <link rel="stylesheet" href="css/style.css"> -->
+    
     <!-- page setup -->
     <title>Bryant Contracting: Home</title>
     <meta charset="UTF-8">
@@ -31,7 +33,7 @@
     </div>
     
     <div class="section">
-        <img src="Images/bryant_contracting_bgimage_1.JPG" alt="Image 2">
+        <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 2">
         <div class="content-left">
             <h2 class="large-text">Our services</h2>
             <p class="medium-text">
@@ -42,7 +44,7 @@
     </div>
     
     <div class="section">
-        <img src="Images/bryant_contracting_bgimage_1.JPG" alt="Image 3">
+        <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 3">
         <div class="content-right">
             <h2 class="large-text">Our equipment</h2>
             <p class="medium-text">

@@ -184,50 +184,59 @@ nav a:hover {
 /*-------------------------------------------------------------------------*/
 
 div.gallery {
-  border: 1px solid #ccc;
+}
+
+/*Fix the problem with hovering over the third image
+
+Also, some of this might be redundent after removing some things from html*/
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s ease; /* Smooth transition for the scaling effect: From ChatGPT */
 }
 
 div.gallery:hover {
-  border: 1px solid #777;
+    transform: scale(0.98); /* Scale the image down to 98% of its size: From ChatGPT */
 }
 
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-
-* {
-  box-sizing: border-box;
+{
+    box-sizing: border-box;
 }
 
 .responsive {
-  padding: 0 6px;
-  float: left;
-  width: 24.99999%;
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    box-sizing: border-box;
+    transition: transform 0.2s ease; /* Smooth transition */
+}
+
+@media only screen and (max-width: 1000px) {
+    .responsive {
+        width: 32.99999%;
+        margin: 6px 0;
+    }
 }
 
 @media only screen and (max-width: 700px) {
-  .responsive {
-    width: 49.99999%;
-    margin: 6px 0;
-  }
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
 }
 
 @media only screen and (max-width: 500px) {
-  .responsive {
-    width: 100%;
-  }
+    .responsive {
+        width: 100%;
+    }
 }
 
+/*IDK if I need this*/
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
 /*---------------------------------------------------------------------------*/

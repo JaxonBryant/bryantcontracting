@@ -25,7 +25,7 @@ header {
 }
 
 .logo {
-    flex-shrink: 0; /* IDK what this does: Courtesy of ChatGPT */
+    flex-shrink: 0; /* IDK what this does: From of ChatGPT */
     margin-right: 20px; 
 }
 
@@ -183,61 +183,58 @@ nav a:hover {
 }
 /*-------------------------------------------------------------------------*/
 
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  transition: transform 0.2s ease; /* Smooth transition for the scaling effect */
+}
+
+.column img:hover {
+  transform: scale(0.98); /* Scale the image down to 98% of its size */
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/*=====
+
 div.gallery {
 }
 
-/*Fix the problem with hovering over the third image
+/*Also, some of this might be redundent after removing some things from html*/
 
-Also, some of this might be redundent after removing some things from html*/
 
-div.gallery img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.2s ease; /* Smooth transition for the scaling effect: From ChatGPT */
-}
 
-div.gallery:hover {
-    transform: scale(0.98); /* Scale the image down to 98% of its size: From ChatGPT */
-}
 
-{
-    box-sizing: border-box;
-}
 
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-    box-sizing: border-box;
-    transition: transform 0.2s ease; /* Smooth transition */
-}
-
-@media only screen and (max-width: 1000px) {
-    .responsive {
-        width: 32.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px) {
-    .responsive {
-        width: 100%;
-    }
-}
-
-/*IDK if I need this*/
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 
 /*---------------------------------------------------------------------------*/
 

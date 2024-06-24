@@ -9,10 +9,10 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
+    <a href="index.php">Home</a>
     <a href="#">Agriculture</a>
     <a href="#">Earthworks</a>
     <a href="#">Cartage</a>
-    <a href="#">Gallery</a>
-    <a href="#" class="right">Contact</a>
+    <a href="gallery.php">Gallery</a>
+    <a href="contacts.php" class="right">Contact</a>
 </nav>

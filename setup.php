@@ -1,7 +1,7 @@
 <?php
 // Database connection details
 $servername = "localhost";
-$username = "secuser";
+$username = "sec_user";
 $password = "greenChair153";
 $dbname = "bryantcontracting";
 

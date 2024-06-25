@@ -53,20 +53,20 @@
     
 
 <div class="container">
-    <form action="action_page.php">
+    <form action="process_form.php" method="POST">
         
         <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <input type="text" id="fname" name="first_name" placeholder="Your name..">
         
         <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <input type="text" id="lname" name="last_name" placeholder="Your last name..">
         
         <!-- This email code was added by me in place of the country, so IDK how it works with everything else-->
         <label for="email">Email</label>
-        <input type="text" id="email" name="Email" placeholder="Your email..">
+        <input type="text" id="email" name="email" placeholder="Your email..">
         
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+        <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
         <input type="submit" value="Submit">
     </form>
 </div>

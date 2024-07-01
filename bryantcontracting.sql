@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2024 at 04:09 AM
+-- Generation Time: Jul 01, 2024 at 11:03 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -37,6 +37,16 @@ CREATE TABLE `contacts` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
+-- Dumping data for table `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `first_name`, `last_name`, `email`, `message`, `created_at`) VALUES
+(1, 'Jaxon', 'Bryant', 'jaxon@test.nz', 'test1', '2024-06-25 01:26:54.000000'),
+(2, 'John', 'Doe', 'JohnDoe@test.nz', 'Hello world', '2024-06-27 00:45:33.000000'),
+(3, 'John', 'Doe', 'JohnDoe@test.nz', 'Hello world again', '2024-06-27 00:45:42.000000'),
+(4, '', '', '', 'I am testing to see how long messages respond to the view_contacts page. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum', '2024-06-27 00:48:43.000000');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -54,7 +64,7 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

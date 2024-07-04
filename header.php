@@ -10,9 +10,9 @@
 
 <nav>
     <a href="index.php">Home</a>
-    <a href="#">Agriculture</a>
-    <a href="#">Earthworks</a>
-    <a href="#">Cartage</a>
+    <a href="agriculture.php">Agriculture</a>
+    <a href="earthworks.php">Earthworks</a>
+    <a href="cartage.php">Cartage</a>
     <a href="gallery.php">Gallery</a>
     <a href="contacts.php" class="right">Contact</a>
 </nav>

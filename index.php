@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <div class="wrapper">
 <head>
     <!-- Apply fonts. The following code is in comment form because IDK how to make it work -->
     
@@ -19,41 +20,39 @@
 
 <body>
 <?php include 'header.php';?>
-    
+        <div class="section">
+            <img src="Images/bryant_contracting_bgimage_1.JPG" alt="Image 1">
+            <div class="content-right">
+                <h2 class="large-text">About us</h2>
+                <p class="medium-text">
+                    BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.
+                </p>
 
-    <div class="section">
-        <img src="Images/bryant_contracting_bgimage_1.JPG" alt="Image 1">
-        <div class="content-right">
-            <h2 class="large-text">About us</h2>
-            <p class="medium-text">
-                BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.
-            </p>
+            </div>
+        </div>
 
+        <div class="section">
+            <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 2">
+            <div class="content-left">
+                <h2 class="large-text">Our services</h2>
+                <p class="medium-text">
+                    Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.
+                    We also provide cartage services.
+                </p>
+            </div>
         </div>
-    </div>
-    
-    <div class="section">
-        <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 2">
-        <div class="content-left">
-            <h2 class="large-text">Our services</h2>
-            <p class="medium-text">
-                Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.
-                We also provide cartage services.
-            </p>
-        </div>
-    </div>
-    
-    <div class="section">
-        <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 3">
-        <div class="content-right">
-            <h2 class="large-text">Our equipment</h2>
-            <p class="medium-text">
-                Our up to date machines include Excavators, bulldozers, truck/trailer/transporter, grader, tractors with both trailers and a full compliment of agricultural attachments—boom sprayer, discs, rotor-tiller, power harrow, roller drill, direct drill, mower, rake, baler/wrapper and more.
-            </p>
-        </div>
-    </div>
 
+        <div class="section">
+            <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 3">
+            <div class="content-right">
+                <h2 class="large-text">Our equipment</h2>
+                <p class="medium-text">
+                    Our up to date machines include Excavators, bulldozers, truck/trailer/transporter, grader, tractors with both trailers and a full compliment of agricultural attachments—boom sprayer, discs, rotor-tiller, power harrow, roller drill, direct drill, mower, rake, baler/wrapper and more.
+                </p>
+            </div>
+        </div>
 <?php include 'footer.php';?>
     
 </body>
+    </div>
 </html>

@@ -93,6 +93,10 @@ nav a.right {
     display: none; /* Hide services links by default */
 }
 
+nav a:hover {
+    background-color: #21641b; /* Lighter green background color on hover */
+}
+
 /* Show services links on large screens */
 @media screen and (min-width: 800px) {
     .services {

@@ -3,15 +3,14 @@
         <div class="logo">
             <img src="images/bryant_contracting_logo.jpg" alt="Bryant Contracting" style="width: 90%;">
         </div>
-        <div class="text" style="background-color: #f1f1f1;">
+        <div class="text">
             <h1>027 215 4213</h1>
             <h3>nik@bryantcontracting.co.nz</h3>
         </div>
     </header>
 
-    <style>
-
-    </style>
+<style>
+</style>
 
 <nav>
     <a href="index.php">Home</a>

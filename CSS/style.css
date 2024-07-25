@@ -1,3 +1,4 @@
+
 <style>
 
 @import url() /* This bit of code (regarding fonts) probably needs to be fixed */
@@ -42,7 +43,6 @@ header {
 
 .text {
     text-align: right; /* Keeps the text to the right */
-    background-color: #f1f1f1 !important; /* Grey background color */
 }
 
 /* Increase the font size of the <h1> element */

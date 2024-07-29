@@ -46,31 +46,30 @@
         }
 
     </style>
-
     </head>
 
-    <body>
-    <?php include 'header.php';?>
+        <body>
+        <?php include 'header.php';?>
 
-        <div class="container">
-            <form action="process_form.php" method="POST">
+            <div class="container">
+                <form action="process_form.php" method="POST">
 
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="first_name" placeholder="Your name..">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="first_name" placeholder="Your name..">
 
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="last_name" placeholder="Your last name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="last_name" placeholder="Your last name..">
 
-                <!-- This email code was added by me in place of the country, so IDK how it works with everything else-->
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Your email..">
+                    <!-- This email code was added by me in place of the country, so IDK how it works with everything else-->
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Your email..">
 
-                <label for="subject">Subject</label>
-                <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
-                <input type="submit" value="Submit">
-            </form>
-        </div>
-    <?php include 'footer.php';?>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="message" placeholder="Write something.." style="height:200px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        <?php include 'footer.php';?>
+    </body>
 </div>
-</body>
 </html>

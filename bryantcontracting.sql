@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2024 at 12:05 AM
+-- Generation Time: Jul 31, 2024 at 12:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -70,7 +70,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `image2`, `title3`, `text3`, `image3`) VALUES
-(1, 'About us', 'BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.', 'bryant_contracting_bgimage_1.JPG', 'Our services', 'Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.\r\n                    We also provide cartage services.', 'bryant_contracting_bgimage_2.JPG', NULL, NULL, NULL);
+(1, 'About us', 'BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.', 'bryant_contracting_bgimage_1.JPG', 'Our services', 'Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.\r\n                    We also provide cartage services.', 'bryant_contracting_bgimage_2.JPG', 'Our equipment', 'Our up to date machines include Excavators, bulldozers, truck/trailer/transporter, grader, tractors with both trailers and a full compliment of agricultural attachments—boom sprayer, discs, rotor-tiller, power harrow, roller drill, direct drill, mower, rake, baler/wrapper and more.', 'bryant_contracting_bgimage_2.JPG');
 
 --
 -- Indexes for dumped tables

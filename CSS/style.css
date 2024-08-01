@@ -26,6 +26,8 @@
     font-size: 27px;
 }
 
+/*--------------------------------------------------------------------------------*/
+
 /* style the header */
 header {
     padding: 10px; /* Some padding */
@@ -66,6 +68,7 @@ header h1 {
     }
 }
     
+/*----------------------------------------------------------------------------------*/
 
 /* Style the top navigation bar */
 nav {
@@ -168,6 +171,10 @@ nav a:hover {
     box-sizing: border-box;
 }
 
+/*-------------------------------------------------------------------------------------------*/
+
+/* home page styling */
+
 /* Main body sections with images */
 .section {
     position: relative;
@@ -251,9 +258,15 @@ nav a:hover {
         margin: 0 auto 20px auto;
     }
 }
-/*-------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------------------------*/\
+
+/* Contacts page styling */
 
 
+
+/*--------------------------------------------------------------------------------------------------*/
+
+/* Gallery styling */
 .row {
   display: flex;
   flex-wrap: wrap;
@@ -301,14 +314,20 @@ div.gallery {
 
 /*Also, some of this might be redundent after removing some things from html*/
 
+/*-------------------------------------------------------------------------------------------------*/
+
+/* Contacts styling
+
+Look in contacts.php
+moving the css code here breaks everything for some reason.
+
+*/
 
 
 
+/*-------------------------------------------------------------------------------------------------*/
 
-
-/*---------------------------------------------------------------------------*/
-
-    
+    /* footer styling */
 .footer {
     padding: 20px; /* Some padding */
     text-align: left; /* Left text*/

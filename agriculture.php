@@ -13,38 +13,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="css/style.css">
 
-    <style>
-    </style>
+<style>
+</style>
 
-    </head>
+</head>
 
     <body>
-    <?php include 'header.php';?>
-        <title1>Agriculture</title1>
+        <?php include 'header.php';?>
         
-        <title2>Silage- Grass</title2>
-        
-            <p>Round bales
-            loader wagons
-            Forage harvesting</p>
+            <div class="section">
 
-        <title2>Silage- Maize</title2>
-        
-            <p>Planting
-            Harvesting </p>
+                <img src="Images/bryant_contracting_bgimage_1.JPG" alt="this is a picture of a tractor">
+                <div class="content-right">
+                    <h2 class="large-text">"Title"</h2>
+                    <p class="medium-text">
+                        "Important info about tractors"
+                    </p>
 
-        <title2>Cultivation and planting</title2>
-        
-            <p>Power harrow
-            Rotter tilling
-            Direct drilling - seed- fert- slug bait
-            Roller drill
-            Disc</p>
-
-            <p>Spraying
-            Boom spraying
-            </p>
-    <?php include 'footer.php';?>
+                </div>
+            </div>
+        <?php include 'footer.php';?>
 
     </body>
 </div>

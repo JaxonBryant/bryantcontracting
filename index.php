@@ -15,42 +15,72 @@
 
 <style>
 </style>
+<?php
+// Include the database configuration file
+include 'setup.php';
+
+// Fetch all pages from the database
+$sql = "SELECT * FROM pages where id = 1 ";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    $page = $result->fetch_assoc();
+            //print_r( $page);
+    
+    // Assign the fields to variables
+    $title1 = $page['title1'];
+    $text1 = $page['text1'];
+    $image1 = $page['image1'];
+    $title2 = $page['title2'];
+    $text2 = $page['text2'];
+    $image2 = $page['image2'];
+    $title3 = $page['title3'];
+    $text3 = $page['text3'];
+    $image3 = $page['image3'];
+  } else {
+    echo "Page not found.";
+    exit;
+  }
+
+
+
+?>
 
 </head>
 
 <body>
 <?php include 'header.php';?>
-        <div class="section">
-            <img src="Images/bryant_contracting_bgimage_1.JPG" alt="Image 1">
-            <div class="content-right">
-                <h2 class="large-text">About us</h2>
-                <p class="medium-text">
-                    BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.
-                </p>
+    <div class="section">
+           
+        <img src="Images/<?php Print $image1; ?>" alt="this is a picture of a tractor">
+        <div class="content-right">
+            <h2 class="large-text"><?php Print $title1; ?></h2>
+            <p class="medium-text">
+        <?php Print $text1; ?>
+            </p>
 
-            </div>
         </div>
+    </div>
 
-        <div class="section">
-            <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 2">
-            <div class="content-left">
-                <h2 class="large-text">Our services</h2>
-                <p class="medium-text">
-                    Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.
-                    We also provide cartage services.
-                </p>
-            </div>
+    <div class="section">
+           
+        <img src="Images/<?php Print $image2; ?>" alt="this is a picture of a tractor">
+        <div class="content-left">
+            <h2 class="large-text"><?php Print $title2; ?></h2>
+            <p class="medium-text">
+        <?php Print $text2; ?>
+            </p>
         </div>
+    </div>
 
-        <div class="section">
-            <img src="Images/bryant_contracting_bgimage_2.JPG" alt="Image 3">
-            <div class="content-right">
-                <h2 class="large-text">Our equipment</h2>
-                <p class="medium-text">
-                    Our up to date machines include Excavators, bulldozers, truck/trailer/transporter, grader, tractors with both trailers and a full compliment of agricultural attachments—boom sprayer, discs, rotor-tiller, power harrow, roller drill, direct drill, mower, rake, baler/wrapper and more.
-                </p>
-            </div>
+    <div class="section">
+        <img src="Images/<?php Print $image3; ?>" alt="this is a picture of a tractor">
+        <div class="content-right">
+            <h2 class="large-text"><?php Print $title3; ?></h2>
+            <p class="medium-text">
+        <?php Print $text3; ?>
+            </p>
         </div>
+    </div>
 <?php include 'footer.php';?>
     
 </body>

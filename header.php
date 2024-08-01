@@ -28,7 +28,7 @@
         </div>
     </div>
     <a href="gallery.php">Gallery</a>
-    <a href="contacts.php" class="right">Contacts</a>
+    <a href="contacts.php">Contacts</a>
 </nav>
 
 <script>

@@ -13,18 +13,18 @@
 </style>
 
 <nav>
-    <a href="index.php">Home</a>
+    <a href="index.php?id=1">Home</a>
     <div class="services">
-        <a href="agriculture.php">Agriculture</a>
-        <a href="earthworks.php">Earthworks</a>
-        <a href="cartage.php">Cartage</a>
+        <a href="services.php">Agriculture</a>
+        <a href="services.php">Earthworks</a>
+        <a href="services.php">Cartage</a>
     </div>
     <div class="dropdown">
         <a href="#" class="dropbtn">Services &#9662;</a>
         <div class="dropdown-content">
-            <a href="agriculture.php">Agriculture</a>
-            <a href="earthworks.php">Earthworks</a>
-            <a href="cartage.php">Cartage</a>
+            <a href="services.php">Agriculture</a>
+            <a href="services.php">Earthworks</a>
+            <a href="services.php">Cartage</a>
         </div>
     </div>
     <a href="gallery.php">Gallery</a>

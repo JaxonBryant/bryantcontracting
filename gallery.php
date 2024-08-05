@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<div class="wrapper">
+
     <head>
         <!-- Apply fonts. The following code is in comment form because IDK how to make it work -->
 
@@ -17,52 +17,49 @@
     </style>
 
     </head>
-
     <body>
     <?php include 'header.php';?>
 
         <br>
-
         <div class="row">
-          <div class="column">
-              <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
-              <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
-              <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
-              <img src="Images/bryant_contracting_bgimage_2.JPG" class="gallery">
-              <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
-              <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
-              <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
-          </div>
-          <div class="column">
-              <img src="Images/bryant_contracting_bgimage_2.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_bgimage_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-          </div>
-          <div class="column">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_bgimage_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_bgimage_2.JPG">
-              <img src="Images/bryant_contracting_bgimage_2.JPG">
-          </div>
-          <div class="column">
-              <img src="Images/bryant_contracting_bgimage_2.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-              <img src="Images/bryant_contracting_bgimage_2.JPG">
-              <img src="Images/bryant_contracting_image_1.JPG">
-          </div>
+            <div class="column">
+                <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
+                <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
+                <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
+                <img src="Images/bryant_contracting_bgimage_2.JPG" class="gallery">
+                <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
+                <img src="Images/bryant_contracting_bgimage_1.JPG" class="gallery">
+                <img src="Images/bryant_contracting_image_1.JPG" class="gallery">
+            </div>
+            <div class="column">
+                <img src="Images/bryant_contracting_bgimage_2.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_bgimage_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+            </div>
+            <div class="column">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_bgimage_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_bgimage_2.JPG">
+                <img src="Images/bryant_contracting_bgimage_2.JPG">
+            </div>
+            <div class="column">
+                <img src="Images/bryant_contracting_bgimage_2.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+                <img src="Images/bryant_contracting_bgimage_2.JPG">
+                <img src="Images/bryant_contracting_image_1.JPG">
+            </div>
         </div>
 
         <br>
-    </div>
     <?php include 'footer.php';?>
+        
     </body>
-</div>
 </html>

@@ -21,7 +21,7 @@ $stmt->close();
 <head>
     <meta charset="UTF-8">
     <title>Profile Page</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="loggedin">
     <nav class="navtop">

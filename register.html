@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="css/style.css">
     <style>
         /* Reset and global styles */
@@ -22,7 +23,7 @@
             margin: 0;
         }
 
-        .login {
+        .register {
             width: 100%;
             max-width: 400px;
             background-color: #ffffff;
@@ -32,7 +33,7 @@
             border-radius: 8px;
         }
 
-        .login h1 {
+        .register h1 {
             text-align: center;
             color: #5b6574;
             font-size: 24px;
@@ -41,18 +42,19 @@
             padding-bottom: 10px;
         }
 
-        .login form {
+        .register form {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .login form label {
+        .register form label {
             display: none; /* Icons are hidden but kept for accessibility */
         }
 
-        .login form input[type="text"],
-        .login form input[type="password"] {
+        .register form input[type="text"],
+        .register form input[type="password"],
+        .register form input[type="email"] {
             width: 100%;
             max-width: 310px;
             height: 50px;
@@ -64,7 +66,7 @@
             color: #333333;
         }
 
-        .login form input[type="submit"] {
+        .register form input[type="submit"] {
             width: 100%;
             max-width: 310px;
             padding: 15px;
@@ -79,44 +81,49 @@
             transition: background-color 0.2s;
         }
 
-        .login form input[type="submit"]:hover {
+        .register form input[type="submit"]:hover {
             background-color: #2868c7;
         }
 
-        .register {
+        .register .login-link {
             text-align: center;
             margin-top: 20px;
-        }
-
-        .register span {
             font-size: 14px;
             color: #333333;
         }
 
-        .register a {
+        .register .login-link a {
             color: #3274d6;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .register a:hover {
+        .register .login-link a:hover {
             text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <?php include 'header.php';?>
-    <div class="login">
-        <h1>Login</h1>
-        <form action="authenticate.php" method="post">
-            <label for="username"><i class="fas fa-user"></i></label>
+    <div class="register">
+        <h1>Register</h1>
+        <form action="register.php" method="post" autocomplete="off">
+            <label for="username">
+                <i class="fas fa-user"></i>
+            </label>
             <input type="text" name="username" placeholder="Username" id="username" required>
-            <label for="password"><i class="fas fa-lock"></i></label>
+            <label for="password">
+                <i class="fas fa-lock"></i>
+            </label>
             <input type="password" name="password" placeholder="Password" id="password" required>
-            <input type="submit" value="Login">
+            <label for="email">
+                <i class="fas fa-envelope"></i>
+            </label>
+            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="submit" value="Register">
         </form>
-        <div class="register">
-            <span>Don't have an account? <a href="register.html">Register here!</a></span>
+        <div class="login-link">
+            <span>Already have an account? <a href="login.html">Login here</a></span>
         </div>
     </div>
 </body>

@@ -17,8 +17,9 @@ $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
+<div class="wrapper">
 <html>
-    <div class="wrapper">
+    
         <head>
             <meta charset="UTF-8">
             <title>Home Page</title>
@@ -37,7 +38,7 @@ $result = $conn->query($sql);
                 <p>Welcome back, <?= htmlspecialchars($_SESSION['name'], ENT_QUOTES) ?>!</p>
             </div>
         </body>
-        </html>
+</html>
 
         <!DOCTYPE html>
         <html>
@@ -58,6 +59,7 @@ $result = $conn->query($sql);
             <?php endwhile; ?>
           </ul>
         </body>
-    </div> <!-- I dont know why this is red -->s
+     <!-- I dont know why this is red -->s
 </html>
 
+</div>

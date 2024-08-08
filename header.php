@@ -29,6 +29,7 @@
     </div>
     <a href="gallery.php">Gallery</a>
     <a href="contacts.php">Contacts</a>
+    <a href="login.html" class="right">Login</a>
 </nav>
 
 <script>

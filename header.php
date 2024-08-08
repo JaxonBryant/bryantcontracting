@@ -15,16 +15,16 @@
 <nav>
     <a href="index.php?id=1">Home</a>
     <div class="services">
-        <a href="services.php">Agriculture</a>
-        <a href="services.php">Earthworks</a>
-        <a href="services.php">Cartage</a>
+        <a href="services.php?id=2">Agriculture</a>
+        <a href="services.php?id=3">Earthworks</a>
+        <a href="services.php?id=4">Cartage</a>
     </div>
     <div class="dropdown">
         <a href="#" class="dropbtn">Services &#9662;</a>
         <div class="dropdown-content">
-            <a href="services.php">Agriculture</a>
-            <a href="services.php">Earthworks</a>
-            <a href="services.php">Cartage</a>
+            <a href="services.php?id=2">Agriculture</a>
+            <a href="services.php?id=3">Earthworks</a>
+            <a href="services.php?id=4">Cartage</a>
         </div>
     </div>
     <a href="gallery.php">Gallery</a>

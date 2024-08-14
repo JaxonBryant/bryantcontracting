@@ -7,13 +7,13 @@ include 'setup.php';
      exit('Please fill both the username and password fields!');
  }
 // Prepare SQL statement to prevent SQL injection
-if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?')) {
+if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE username = ?')) {
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
     $stmt->store_result();
     // Check if the account exists
     if ($stmt->num_rows > 0) {
-        $stmt->bind_result($id, $password);
+        $stmt->bind_result($id, $password, $admin);
         $stmt->fetch();
         // Verify password
         if (password_verify($_POST['password'], $password)) {
@@ -21,8 +21,11 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
+            $_SESSION['admin'] = $_POST['admin'];
             $_SESSION['id'] = $id;
-            header('Location: admin.php');
+            #header('Location: admin.php');
+            if ($_POST['admin'] == 1) { header('Location: admin.php');}
+			else { header('Location: index.php');}
         } else {
             echo 'Incorrect username and/or password!';
         }

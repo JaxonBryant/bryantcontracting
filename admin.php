@@ -1,8 +1,10 @@
+if ($_POST['username'] == 'admin') { header('Location: admin.php');}
+			else { header('Location: index.php');}
 <?php
 session_start();
 // Redirect to login page if user is not logged in
 if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.html');
+    header('Location: login.html');
     exit;
 }
 ?>

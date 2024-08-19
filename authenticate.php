@@ -11,21 +11,28 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE usern
     $stmt->bind_param('s', $_POST['username']);
     $stmt->execute();
     $stmt->store_result();
+    
     // Check if the account exists
     if ($stmt->num_rows > 0) {
         $stmt->bind_result($id, $password, $admin);
         $stmt->fetch();
+        
         // Verify password
         if (password_verify($_POST['password'], $password)) {
             // Success! Start the session
             session_regenerate_id();
             $_SESSION['loggedin'] = TRUE;
             $_SESSION['name'] = $_POST['username'];
-            $_SESSION['admin'] = $_POST['admin'];
+            $_SESSION['admin'] = $admin; // Use the value retrieved from the database
             $_SESSION['id'] = $id;
-            #header('Location: admin.php');
-            if ($_POST['admin'] == 1) { header('Location: admin.php');}
-			else { header('Location: index.php');}
+            
+            // Redirect based on admin status
+            if ($admin == 1) { 
+                header('Location: admin.php');
+            } else { 
+                header('Location: index.php');
+            }
+            exit(); // Ensure no further code runs after the redirect
         } else {
             echo 'Incorrect username and/or password!';
         }
@@ -34,4 +41,3 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE usern
     }
     $stmt->close();
 }
-?>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2024 at 04:57 AM
+-- Generation Time: Aug 19, 2024 at 02:31 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -31,15 +31,17 @@ CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `email` varchar(100) NOT NULL
+  `email` varchar(100) NOT NULL,
+  `admin` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`) VALUES
-(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com');
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`) VALUES
+(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1),
+(2, 'Jaxon', '$2y$10$ZJD/Usoqi53A2Kpcmte10uqF7o5m.djxWSE8DTjPc4o9aT6Od3rdO', 'jbryant18@piopio.school.nz', 0);
 
 -- --------------------------------------------------------
 
@@ -93,7 +95,7 @@ INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `imag
 (1, 'About us', 'BRYANT CONTRACTING LTD was established in September 2006. Managing Director Nik Bryant is the driving force behind the business and is both an experienced machine operator as well as a respected operations manager. If there is a job on your farm that needs doing we have the gear and the knowledge to get the job done.', 'bryant_contracting_bgimage_1.JPG', 'Our services', 'Bryant Contracting are able to do a large range of earthworks and agricultural work—including farm drainage, contouring, races, spraying, seeding, hay/silage and fertilizer cartage and spreading.\r\n                    We also provide cartage services.', 'bryant_contracting_bgimage_2.JPG', 'Our equipment', 'Our up to date machines include Excavators, bulldozers, truck/trailer/transporter, grader, tractors with both trailers and a full compliment of agricultural attachments—boom sprayer, discs, rotor-tiller, power harrow, roller drill, direct drill, mower, rake, baler/wrapper and more.', 'bryant_contracting_bgimage_2.JPG'),
 (2, 'Agriculture', 'Silage- Grass\r\nRound bales\r\nloader wagons\r\nForage harvesting\r\n\r\nSilage- Maize\r\nPlanting\r\nHarvesting \r\n\r\nCultivation and planting\r\nPower harrow\r\nRotter tilling\r\nDirect drilling - seed- fert- slug bait\r\nRoller drill\r\nDisc\r\n\r\nSpraying\r\nBoom spraying\r\n', 'bryant_contracting_bgimage_1.JPG', NULL, NULL, NULL, NULL, NULL, NULL),
 (3, 'Earthworks', '12 T Digger\r\n20 T Digger\r\nD5 Bulldozer\r\nD6 Bulldozer\r\nScoop\r\nRoller\r\nGrader', 'bryant_contracting_bgimage_1.JPG', NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'Cartage', 'Bulk trucks and trailers\r\nTransporter\r\nTractors and trailers', 'bryant_contracting_bgimage_2.JPG', NULL, NULL, NULL, NULL, NULL, NULL);
+(4, 'Cartage', 'Bulk trucks and trailers\r\nTransporter\r\nTractors and trailers', 'bryant_contracting_bgimage_2.JPG', '', '', '', '', '', '');
 
 --
 -- Indexes for dumped tables
@@ -125,7 +127,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `contacts`

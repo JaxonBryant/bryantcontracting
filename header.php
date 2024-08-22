@@ -29,7 +29,18 @@
     </div>
     <a href="gallery.php">Gallery</a>
     <a href="contacts.php">Contacts</a>
+    <?php 
+    if(!isset($_SESSION['loggedin'])){?>
     <a href="login.html" class="right">Login</a>
+    <?php }
+
+    else
+    {
+    ?>          
+    <a href="logout.php" class="right">Logout</a>
+    <?php 
+        } 
+    ?>
 </nav>
 
 <script>

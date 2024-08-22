@@ -9,13 +9,15 @@ if (!isset($_SESSION['loggedin'])) {
 
 // print_r($_SESSION); die();
 
-if ($_SESSION['admin'] != 1) { header('Location: index.php');}
+//if ($_SESSION['admin'] != 1) { header('Location: index.php');}
 
+$id = $_SESSION['id'];
+    
 // Include the database configuration file
 include 'setup.php';
 
 // Fetch all pages from the database
-$sql = "SELECT * FROM pages";
+$sql = "SELECT * FROM accounts where id='$id'";
 $result = $conn->query($sql);
 ?>
 

@@ -1,3 +1,13 @@
+
+<?php
+session_start();
+print "session";print "<br />";
+print_r($_SESSION); //accounts_ID
+print "<br />";
+print "post";print "<br />";
+print_r($_POST); //product_ID
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <div class="wrapper">

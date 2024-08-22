@@ -3,7 +3,7 @@ session_start();
 // Database connection details
 include 'setup.php';
 // Check if data from the login form was submitted
- if (!isset($_POST['username'], $_POST['password'])) {
+if (!isset($_POST['username'], $_POST['password'])) {
      exit('Please fill both the username and password fields!');
  }
 // Prepare SQL statement to prevent SQL injection
@@ -30,7 +30,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE usern
             if ($admin == 1) { 
                 header('Location: admin.php');
             } else { 
-                header('Location: index.php');
+                header('Location: custdashboard.php');
             }
             exit(); // Ensure no further code runs after the redirect
         } else {

@@ -25,29 +25,10 @@ $result = $conn->query($sql);
 <div class="wrapper">
 <html>
     
-    <head>
-        <meta charset="UTF-8">
-        <title>Home Page</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    
-    <body class="loggedin">
-        
-        <nav class="navtop">
-            <div>
-                <h1>Customer Dashboard</h1>
-                <a href="custdashboard.php"><i class="fas fa-user-circle"></i>Home</a>
-                <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-                <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
-            </div>
-        </nav>
-        
-    </body>
-    
-    <?php include 'header_logic.php';?>
+<?php include 'header_logic.php';?>
         
         <div class="content">
-            <h2>Admin Page</h2>
+            <h2>Customer Page</h2>
             <p>Welcome back, <?= htmlspecialchars($_SESSION['name'], ENT_QUOTES) ?>!</p>
         </div>
     

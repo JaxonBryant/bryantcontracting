@@ -12,7 +12,7 @@ if (!isset($_SESSION['loggedin'])) {
 $user_role = $_SESSION['admin'] ?? 0; // Default to 0 if not set
 
 // Include the appropriate header based on the user's role
-if ($admin == 1) {
+if ($_SESSION['admin'] == 1) {
     include 'header_admin.php'; // Admin-specific header
 } else {
     include 'header_customer.php'; // Customer-specific header

@@ -57,7 +57,7 @@ if (isset($_GET['id'])) {
 
                 <img src="Images/<?php Print $image1; ?>" alt="this is a picture of a tractor">
                 <div class="content-right">
-                    <h2 class="large-text"><?php Print $title1; ?></h2>
+                    <h2 class="large-text"><a href="bookings_form.php"><?php Print $title1; ?></a></h2>
                     <p class="medium-text"><?php Print $text1; ?></p>
 
                 </div>

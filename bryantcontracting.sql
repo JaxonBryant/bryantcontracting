@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 19, 2024 at 02:31 AM
+-- Generation Time: Sep 13, 2024 at 01:29 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,6 +42,28 @@ CREATE TABLE `accounts` (
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`) VALUES
 (1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1),
 (2, 'Jaxon', '$2y$10$ZJD/Usoqi53A2Kpcmte10uqF7o5m.djxWSE8DTjPc4o9aT6Od3rdO', 'jbryant18@piopio.school.nz', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bookings`
+--
+
+CREATE TABLE `bookings` (
+  `id` int(11) NOT NULL,
+  `customer_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `date_booking` date NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `customer_id`, `service_id`, `date_booking`, `created_at`) VALUES
+(1, 2, 1, '2024-09-14', '2024-09-12 23:16:55'),
+(2, 2, 4, '2024-09-20', '2024-09-12 23:18:45');
 
 -- --------------------------------------------------------
 
@@ -97,6 +119,30 @@ INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `imag
 (3, 'Earthworks', '12 T Digger\r\n20 T Digger\r\nD5 Bulldozer\r\nD6 Bulldozer\r\nScoop\r\nRoller\r\nGrader', 'bryant_contracting_bgimage_1.JPG', NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 'Cartage', 'Bulk trucks and trailers\r\nTransporter\r\nTractors and trailers', 'bryant_contracting_bgimage_2.JPG', '', '', '', '', '', '');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `service`
+--
+
+CREATE TABLE `service` (
+  `id` int(11) NOT NULL,
+  `service_name` varchar(40) NOT NULL,
+  `items` text NOT NULL,
+  `type` varchar(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `service`
+--
+
+INSERT INTO `service` (`id`, `service_name`, `items`, `type`) VALUES
+(1, 'Silage- Grass', 'Round bales\r\nloader wagons\r\nForage harvesting\r\n', 'Agriculture'),
+(2, 'Silage- Maize', 'Planting\r\nHarvesting ', 'Agriculture'),
+(3, 'Cultivation and planting', 'Power harrow\r\nRotter tilling\r\nDirect drilling - seed- fert- slug bait\r\nRoller drill\r\nDisc', 'Agriculture'),
+(4, 'Spraying', 'Boom spraying', 'Agriculture'),
+(5, '12 T Digger', '12 T Digger', 'EarthWorks');
+
 --
 -- Indexes for dumped tables
 --
@@ -105,6 +151,12 @@ INSERT INTO `pages` (`id`, `title1`, `text1`, `image1`, `title2`, `text2`, `imag
 -- Indexes for table `accounts`
 --
 ALTER TABLE `accounts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `bookings`
+--
+ALTER TABLE `bookings`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -120,6 +172,12 @@ ALTER TABLE `pages`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `service`
+--
+ALTER TABLE `service`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -127,6 +185,12 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `bookings`
+--
+ALTER TABLE `bookings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -140,6 +204,12 @@ ALTER TABLE `contacts`
 --
 ALTER TABLE `pages`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `service`
+--
+ALTER TABLE `service`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

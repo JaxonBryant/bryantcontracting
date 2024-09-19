@@ -51,7 +51,7 @@ $result = $conn->query($sql);
 </head>
     <body>
 
-        <h1>Contact Messages</h1>
+        <h1>Messages</h1>
         <table>
             <tr>
                 <!-- Table headers for displaying contact data -->

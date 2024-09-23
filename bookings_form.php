@@ -12,6 +12,14 @@ if (!$_SESSION['loggedin']) {
     exit();
 }
 
+// Check if user account is validated
+if ($account['activation_code'] == 'activated') {
+	continue
+} else {
+	header('Location: login.php');
+    exit();
+}
+
 print_r($_POST);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

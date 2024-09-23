@@ -13,7 +13,7 @@ if (!$_SESSION['loggedin']) {
 }
 
 
-$customer_id = $_SESSION['customer_id'];
+$customer_id = $_SESSION['id'];
 
 // SQL query to fetch the student's results and teacher information
 $stmt = $conn->prepare("

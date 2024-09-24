@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2024 at 10:39 PM
+-- Generation Time: Sep 25, 2024 at 12:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -42,7 +42,8 @@ CREATE TABLE `accounts` (
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`, `activation_code`) VALUES
 (1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1, ''),
-(3, 'Jaxon', '$2y$10$0U3NHgcscWrjUVZByQq7/OCN4UsXw6hO2y6XB394004OBg1j0V5Ca', 'jbryant18@piopio.school.nz', 0, '66f0b88fd8acf');
+(3, 'Jaxon', '$2y$10$0U3NHgcscWrjUVZByQq7/OCN4UsXw6hO2y6XB394004OBg1j0V5Ca', 'jbryant18@piopio.school.nz', 0, '66f0b88fd8acf'),
+(4, 'Student', '$2y$10$hjFgw0ektBDxtbQIy3V.tOrFPJQBGRAKZ8JYzlc7xtYCXpQ0FF/Ja', 'student@email.com', 0, '');
 
 -- --------------------------------------------------------
 
@@ -57,6 +58,13 @@ CREATE TABLE `bookings` (
   `date_booking` date NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `bookings`
+--
+
+INSERT INTO `bookings` (`id`, `customer_id`, `service_id`, `date_booking`, `created_at`) VALUES
+(3, 4, 5, '2025-03-03', '2024-09-24 22:48:24');
 
 -- --------------------------------------------------------
 
@@ -180,13 +188,13 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `contacts`

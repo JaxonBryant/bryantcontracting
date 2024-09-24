@@ -13,12 +13,12 @@ if (!$_SESSION['loggedin']) {
 }
 
 // Check if user account is validated
-if ($account['activation_code'] == 'activated') {
-	continue
-} else {
-	header('Location: login.php');
-    exit();
-}
+//if ($account['activation_code'] == 'activated') {
+//	continue
+//} else {
+//	header('Location: login.php');
+//    exit();
+//}
 
 print_r($_POST);
 

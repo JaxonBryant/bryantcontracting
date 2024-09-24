@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 19, 2024 at 04:19 AM
+-- Generation Time: Sep 24, 2024 at 10:39 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -32,16 +32,17 @@ CREATE TABLE `accounts` (
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
   `email` varchar(100) NOT NULL,
-  `admin` int(11) NOT NULL
+  `admin` int(11) NOT NULL,
+  `activation_code` varchar(50) DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`) VALUES
-(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1),
-(2, 'Jaxon', '$2y$10$ZJD/Usoqi53A2Kpcmte10uqF7o5m.djxWSE8DTjPc4o9aT6Od3rdO', 'jbryant18@piopio.school.nz', 0);
+INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`, `activation_code`) VALUES
+(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1, ''),
+(3, 'Jaxon', '$2y$10$0U3NHgcscWrjUVZByQq7/OCN4UsXw6hO2y6XB394004OBg1j0V5Ca', 'jbryant18@piopio.school.nz', 0, '66f0b88fd8acf');
 
 -- --------------------------------------------------------
 
@@ -56,14 +57,6 @@ CREATE TABLE `bookings` (
   `date_booking` date NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `bookings`
---
-
-INSERT INTO `bookings` (`id`, `customer_id`, `service_id`, `date_booking`, `created_at`) VALUES
-(1, 2, 1, '2024-09-14', '2024-09-12 23:16:55'),
-(2, 2, 4, '2024-09-20', '2024-09-12 23:18:45');
 
 -- --------------------------------------------------------
 
@@ -187,7 +180,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `bookings`

@@ -32,36 +32,34 @@
     
 
     
-    <?php 
-    if(!isset($_SESSION['loggedin'])){?>
-       if ($_SESSION['admin'] == 1) {
-        <a href="{blank link}" class="right">{blank}</a>;
-    } else ($_SESSION['admin'] == 0) {
-        <a href="{blank link}" class="right">{blank}</a>;
+<?php 
+    if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+// Check if the user is logged in
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+
+    // Show the Logout link first
+    echo '<a href="logout.php" class="right">Logout</a>';
+
+    // Check if the user is an admin (admin == 1)
+    if ($_SESSION['admin'] == 1) {
+        // If admin, show the Admin link
+        echo '<a href="admin.php" class="right">Admin</a>';
+    } 
+    // Check if the user is a regular user (admin == 0)
+    elseif ($_SESSION['admin'] == 0) {
+        // If not admin, show the Bookings link
+        echo '<a href="custdashboard_bookings.php" class="right">Bookings</a>';
     }
 
-    else
-    {
-    ?>          
-    <a href="logout.php" class="right">Logout</a>
-    <?php 
-        } 
-    ?>
-    
-    
-    
-    <?php 
-    if(!isset($_SESSION['loggedin'])){?>
-    <a href="login.html" class="right">Login</a>
-    <?php }
+} else {
+    // If not logged in, show the Login link
+    echo '<a href="login.html" class="right">Login</a>';
+}
+?>
 
-    else
-    {
-    ?>          
-    <a href="logout.php" class="right">Logout</a>
-    <?php 
-        } 
-    ?>
+
 </nav>
 
 <script>

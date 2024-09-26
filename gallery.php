@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <div class="wrapper">
 
     <head>
         <!-- Apply fonts. The following code is in comment form because IDK how to make it work -->

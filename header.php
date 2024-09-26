@@ -29,6 +29,27 @@
     </div>
     <a href="gallery.php">Gallery</a>
     <a href="contacts.php">Contacts</a>
+    
+
+    
+    <?php 
+    if(!isset($_SESSION['loggedin'])){?>
+       if ($_SESSION['admin'] == 1) {
+        <a href="{blank link}" class="right">{blank}</a>;
+    } else ($_SESSION['admin'] == 0) {
+        <a href="{blank link}" class="right">{blank}</a>;
+    }
+
+    else
+    {
+    ?>          
+    <a href="logout.php" class="right">Logout</a>
+    <?php 
+        } 
+    ?>
+    
+    
+    
     <?php 
     if(!isset($_SESSION['loggedin'])){?>
     <a href="login.html" class="right">Login</a>

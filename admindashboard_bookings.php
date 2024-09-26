@@ -44,9 +44,9 @@ $results = $stmt->get_result();
 
 <!DOCTYPE html>
 <html>
-    <div class="wrapper">
     <head>
-        <br>
+        <div class="wrapper">
+        <?php include 'header_admin.php';?>
         <title>Bookings</title>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <style>
@@ -67,7 +67,7 @@ $results = $stmt->get_result();
         </style>
     </head>
     <body>
-        <?php include 'header_logic.php'; ?>
+        <br>
         <h1>Admin Dashboard</h1>
         <table>
             <tr>

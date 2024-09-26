@@ -46,26 +46,12 @@ $results = $stmt->get_result();
     <div class="wrapper">
     <head>
         <title>Customer Dashboard: Bookings</title>
-        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
         <style>
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-            table, th, td {
-                border: 1px solid black;
-            }
-            th, td {
-                padding: 8px;
-                text-align: left;
-            }
-            th {
-                background-color: #f2f2f2;
-            }
         </style>
     </head>
     <body>
-        <?php include 'header_logic.php'; ?>
+        <?php include 'header.php'; ?>
         <h1>Your Bookings</h1>
         <br>
         <table>

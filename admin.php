@@ -20,40 +20,27 @@ $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
-<div class="wrapper">
-    <html>
+<html>
+    <div class="wrapper">
+    <head>
+      <title>Admin Panel</title>
+        <?php include 'header_admin.php';?>
+    </head>
 
-    <?php include 'header_logic.php';?>
-
-        <body>
-            <div class="content">
-                <h2>Admin Page</h2>
-                <p>Welcome back, <?= htmlspecialchars($_SESSION['name'], ENT_QUOTES) ?>!</p>
-            </div>
-        </body>
-
-    </html>
-
-    <!DOCTYPE html>
-    <html>
-        <head>
-          <title>Admin Panel</title>
-        </head>
-
-        <body>
-            <h1>Admin Panel</h1>
-            <a href="add_page.php">Add New Page</a>
-            <h2>Pages</h2>
-            <ul>
-                <?php while ($row = $result->fetch_assoc()): ?>
-                    <li>
-                        <h3><?php echo $row['title1']; ?></h3>
-                        <a href="edit_page.php?id=<?php echo $row['id']; ?>">Edit</a>
-                        <a href="delete_page.php?id=<?php echo $row['id']; ?>">Delete</a>
-                    </li>
-                <?php endwhile; ?>
-            </ul>
-        </body>
-    </html>
-
-</div>
+    <body>
+        <br>
+        <h1>Admin Panel</h1>
+        <a href="add_page.php">Add New Page</a>
+        <h2>Pages</h2>
+        <ul>
+            <?php while ($row = $result->fetch_assoc()): ?>
+                <li>
+                    <h3><?php echo $row['title1']; ?></h3>
+                    <a href="edit_page.php?id=<?php echo $row['id']; ?>">Edit</a>
+                    <a href="delete_page.php?id=<?php echo $row['id']; ?>">Delete</a>
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    </body>
+    </div>
+</html>

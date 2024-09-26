@@ -1,20 +1,38 @@
 
-<head>
-    <meta charset="UTF-8">
-    <title>Admin</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body class="loggedin">
-    <nav class="navtop">
-        <div>
-            <h1>Admin Backend</h1>
-            <a href="admin.php"><i class="fas fa-user-circle"></i>Admin</a>
-            <a href="admindashboard_bookings.php"><i class="fas fa-user-circle"></i>Dashboard</a>
-            <a href="view_contacts.php"><i class="fas fa-user-circle"></i>Messages</a>
-            <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-            <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+<body>
+    <header>
+        <link rel="stylesheet" href="css/style.css">
+        <div class="logo">
+            <img src="images/bryant_contracting_logo.jpg" alt="Bryant Contracting" style="width: 90%;">
         </div>
-    </nav>
+        <div class="text">
+            <h1>Admin</h1>
+        </div>
+    </header>
+
+<style>
+</style>
+
+<nav>
+    <a href="admin.php">Edit</a>
+    <a href="admindashboard_bookings.php">Bookings</a>
+    <a href="view_contacts.php">Messages</a>
+    <a href="profile.php">Profile</a>
+    <?php 
+    if(!isset($_SESSION['loggedin'])){?>
+    <a href="login.html" class="right">Login</a>
+    <?php }
+
+    else
+    {
+    ?>          
+    <a href="logout.php" class="right">Logout</a>
+    <?php 
+        } 
+    ?>
+    <a href="index.php?id=1" class="right">Home</a>
+</nav>
+
 </body>
 
 

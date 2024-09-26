@@ -18,9 +18,15 @@ $stmt->close();
 
 <!DOCTYPE html>
 <html>
-    
-<?php include 'header_logic.php';?>
+
+    <header>
+<div class="wrapper">
+        <link rel="stylesheet" href="css/style.css">
+        <?php include 'header_admin.php';?>
+        <style>
+        </style>
     <body>
+        <br>
         <div class="content">
             <h2>Profile Page</h2>
             <div>

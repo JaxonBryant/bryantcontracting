@@ -30,7 +30,7 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE usern
             if ($admin == 1) { 
                 header('Location: admin.php');
             } else { 
-                header('Location: custdashboard.php');
+                header('Location: index.php?id=1');
             }
             exit(); // Ensure no further code runs after the redirect
         } else {

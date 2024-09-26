@@ -50,33 +50,34 @@ $services_result = $services_stmt->get_result();
 
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Service Booking</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-    <?php include 'header.php'; ?>
-    <h1>Service Booking</h1>
-    <form method="POST" action="bookings_form.php">
-        <label for="services_id">Select a service:</label>
-        
-        <select name="services_id" id="services_id" required>
-            <?php while ($service = $services_result->fetch_assoc()): 
-            ?>
-                <option value= "<?php echo htmlspecialchars($service['id']);?>">
-                    <?php echo htmlspecialchars($service['service_name']); 
-                    ?>
-                </option>
-            <?php endwhile;?>
-            
-            
-        </select>
-        <br><br>
-        <label for="date">Date:</label>
-        <input type="date" name="date" id="date" required>
-        <br><br>
-        <button type="submit">Create Booking</button>
-    </form>
-</body>
+    <div class="wrapper">
+    <head>
+        <title>Service Booking</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <?php include 'header.php'; ?>
+        <h1>Service Booking</h1>
+        <form method="POST" action="bookings_form.php">
+            <label for="services_id">Select a service:</label>
+
+            <select name="services_id" id="services_id" required>
+                <?php while ($service = $services_result->fetch_assoc()): 
+                ?>
+                    <option value= "<?php echo htmlspecialchars($service['id']);?>">
+                        <?php echo htmlspecialchars($service['service_name']); 
+                        ?>
+                    </option>
+                <?php endwhile;?>
+
+
+            </select>
+            <br><br>
+            <label for="date">Date:</label>
+            <input type="date" name="date" id="date" required>
+            <br><br>
+            <button type="submit">Create Booking</button>
+        </form>
+    </body>
 </html>
 

@@ -20,19 +20,21 @@ $result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
-<div class="wrapper">
-    <html lang="en">
-    
-<?php include 'header_logic.php';?>
-        
-<br>
-
+<html lang="en">
+ 
 <head>
+    <div class="wrapper">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <?php include 'header_admin.php';?>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Contacts</title>
+        <br>
     <!-- Basic styling for the table -->
     <style>
+
         table {
             width: 100%;
             border-collapse: collapse;

@@ -51,9 +51,6 @@ if ($result->num_rows > 0) {
     echo "Page not found.";
     exit;
   }
-
-
-
 ?>
 
 </head>

@@ -55,7 +55,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
 
 } else {
     // If not logged in, show the Login link
-    echo '<a href="login.html" class="right">Login</a>';
+    echo '<a href="login_form.php" class="right">Login</a>';
 }
 ?>
 

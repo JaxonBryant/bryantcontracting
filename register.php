@@ -5,27 +5,16 @@ include 'setup.php';
 // Now we check if the data was submitted, isset() function will check if the data exists.
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	// Could not get the data that should have been sent.
-	exit('Please complete the registration form!');
-}
-// Make sure the submitted registration values are not empty.
-if (empty($_POST['username']) || empty($_POST['password']) || empty($_POST['email'])) {
-	// One or more values are empty.
-	exit('Please complete the registration form');
+    $_SESSION["message"] = "error message ?? ";
+	 header("Location: http://localhost/regster_form.php");
+    exit();
 }
 
 // email validation
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	exit('Email is not valid!');
-}
-
-// invalid character validation
-if (preg_match('/^[a-zA-Z0-9]+$/', $_POST['username']) == 0) {
-    exit('Username is not valid!');
-}
-
-// character length check
-if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-	exit('Password must be between 5 and 20 characters long!');
+    $_SESSION["Email is not valid"] = "error message ?? ";
+	 header("Location: http://localhost/bryantcontracting/register_form.php");
+    exit();
 }
 
 // We need to check if the account with that username exists.
@@ -57,7 +46,8 @@ if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VAL
     //$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
     //mail($_POST['email'], $subject, $message, $headers);
     //echo 'Please check your email to activate your account!';
-    echo 'You have successfully registered, you can now login!';
+    header("Location: http://localhost/bryantcontracting/login_form.php");
+    exit;
 } else {
 	// Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
 	echo 'Could not prepare statement!';
@@ -69,8 +59,5 @@ if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VAL
 	echo 'Could not prepare statement!';
 }
 $conn->close();
-?>
-
-
 ?>
 

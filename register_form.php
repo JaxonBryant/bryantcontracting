@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+session_start();
+if (isset($_SESSION['message'])) {
+    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    unset($_SESSION['message']);
+}
+?>
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
@@ -101,29 +108,49 @@
         .register .login-link a:hover {
             text-decoration: underline;
         }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
     </style>
 </head>
 <body>
-    <?php include 'header.php';?>
+    
     <div class="register">
         <h1>Register</h1>
         <form action="register.php" method="post" autocomplete="off">
+            
+            <!-- Username: must contain only letters, numbers, and underscores -->
             <label for="username">
                 <i class="fas fa-user"></i>
             </label>
-            <input type="text" name="username" placeholder="Username" id="username" required>
+            <input type="text" name="username" placeholder="Username" 
+                   pattern="[a-zA-Z0-9_]+" 
+                   title="Username can only contain letters, numbers, and underscores" 
+                   required>
+            
+            <!-- Password: must be between 8 and 20 characters -->
             <label for="password">
                 <i class="fas fa-lock"></i>
             </label>
-            <input type="password" name="password" placeholder="Password" id="password" required>
+            <input type="password" name="password" placeholder="Password" 
+                   minlength="8" maxlength="20" 
+                   title="Password must be between 8 and 20 characters" 
+                   required>
+            
+            <!-- Email: using built-in HTML5 email validation -->
             <label for="email">
                 <i class="fas fa-envelope"></i>
             </label>
-            <input type="email" name="email" placeholder="Email" id="email" required>
+            <input type="email" name="email" placeholder="Email" required>
+            
             <input type="submit" value="Register">
         </form>
         <div class="login-link">
-            <span>Already have an account? <a href="login.html">Login here</a></span>
+            <span>Already have an account? <a href="login_form.php">Login here</a></span>
         </div>
     </div>
 </body>

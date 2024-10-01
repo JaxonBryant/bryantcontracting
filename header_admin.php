@@ -20,7 +20,7 @@
     <a href="profile.php">Profile</a>
     <?php 
     if(!isset($_SESSION['loggedin'])){?>
-    <a href="login.html" class="right">Login</a>
+    <a href="login_form.php" class="right">Login</a>
     <?php }
 
     else

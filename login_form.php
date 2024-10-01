@@ -105,7 +105,6 @@
     </style>
 </head>
 <body>
-    <?php include 'header.php';?>
     <div class="login">
         <h1>Login</h1>
         <form action="authenticate.php" method="post">
@@ -116,7 +115,7 @@
             <input type="submit" value="Login">
         </form>
         <div class="register">
-            <span>Don't have an account? <a href="register.html">Register here!</a></span>
+            <span>Don't have an account? <a href="register_form.php">Register here!</a></span>
         </div>
     </div>
 </body>

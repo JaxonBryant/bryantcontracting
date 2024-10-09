@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 // Include the database connection setup file
 include 'setup.php';
 
@@ -6,14 +8,14 @@ include 'setup.php';
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	// Could not get the data that should have been sent.
     $_SESSION["message"] = "error message ?? ";
-	 header("Location: http://localhost/regster_form.php");
+	 header("Location: register_form.php");
     exit();
 }
 
 // email validation
 if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    $_SESSION["Email is not valid"] = "error message ?? ";
-	 header("Location: http://localhost/bryantcontracting/register_form.php");
+    $_SESSION["message"] = "Email is not valid";
+    header("Location: register_form.php");
     exit();
 }
 
@@ -26,7 +28,9 @@ if ($stmt = $conn->prepare('SELECT id, password FROM accounts WHERE username = ?
 	// Store the result so we can check if the account exists in the database.
 	if ($stmt->num_rows > 0) {
 		// Username already exists
-		echo 'Username exists, please choose another!';
+		$_SESSION["message"] = 'Username exists, please choose another!';
+        header("Location: register_form.php");
+        exit();
 	} else {
 		// Username doesn't exists, insert new account
 //if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email, activation_code) VALUES (?, ?, ?, ?)')) {
@@ -46,17 +50,21 @@ if ($stmt = $conn->prepare('INSERT INTO accounts (username, password, email) VAL
     //$message = '<p>Please click the following link to activate your account: <a href="' . $activate_link . '">' . $activate_link . '</a></p>';
     //mail($_POST['email'], $subject, $message, $headers);
     //echo 'Please check your email to activate your account!';
-    header("Location: http://localhost/bryantcontracting/login_form.php");
+    header("Location: login_form.php");
     exit;
 } else {
 	// Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all three fields.
-	echo 'Could not prepare statement!';
+	$_SESSION["message"] = 'Could not prepare statement!';
+    header("Location: register_form.php");
+    exit();
 }
 	}
 	$stmt->close();
 } else {
 	// Something is wrong with the SQL statement, so you must check to make sure your accounts table exists with all 3 fields.
-	echo 'Could not prepare statement!';
+	$_SESSION["message"] = 'Could not prepare statement!';
+    header("Location: register_form.php");
+    exit();
 }
 $conn->close();
 ?>

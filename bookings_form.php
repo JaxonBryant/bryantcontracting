@@ -3,13 +3,19 @@
 session_start();
 require 'setup.php'; // Include database connection
 
-print_r($_SESSION);
+//print_r($_SESSION);
 // die(); 
 
 // Check if user is logged in
 if (!$_SESSION['loggedin']) {
     header('Location: login.php');
     exit();
+}
+
+if (isset($_SESSION['message'])) {
+    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    //die();
+    unset($_SESSION['message']);
 }
 
 // Check if user account is validated
@@ -32,9 +38,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bind_param("iis", $account_id, $services_id, $date_booking);
 
     if ($stmt->execute()) {
-        echo "Booking successfully saved!";
+        $_SESSION["message"] = "Booking successfully saved!";
+        header("Location: custdashboard_bookings.php");
+    exit();
     } else {
-        echo "Error: Could not send booking.";
+        $_SESSION["message"] = "Error: Could not send booking.";
+        header("Location: bookings_form.php");
     }
 
     $stmt->close();

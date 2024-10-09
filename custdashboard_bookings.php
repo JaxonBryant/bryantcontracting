@@ -12,10 +12,15 @@ if (!$_SESSION['loggedin']) {
     exit();
 }
 
+if (isset($_SESSION['message'])) {
+    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    //die();
+    unset($_SESSION['message']);
+}
 
 $customer_id = $_SESSION['id'];
 
-// SQL query to fetch the student's results and teacher information
+// SQL query to fetch the customer's booking information information
 $stmt = $conn->prepare("
     SELECT 
         bookings.id AS booking_id, 

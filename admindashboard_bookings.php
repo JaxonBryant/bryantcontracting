@@ -13,8 +13,6 @@ if ($_SESSION['admin'] != 1) { header('Location: index.php');}
 // Include the database configuration file
 include 'setup.php';
 
-//$teacher_id = $_SESSION['account_id'];
-
 // SQL query to fetch customers and their bookings
 $stmt = $conn->prepare("    
     SELECT 

@@ -45,6 +45,8 @@ $stmt->execute();
 $results = $stmt->get_result();
 ?>
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
 
 <!DOCTYPE html>
 <html>
@@ -71,6 +73,7 @@ $results = $stmt->get_result();
         </style>
     </head>
     <body>
+        <?php include 'modal.php'; ?>
         <h1>Your Bookings</h1>
         <br>
         <table>

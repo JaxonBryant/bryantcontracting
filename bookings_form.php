@@ -1,10 +1,6 @@
-
 <?php
 session_start();
 require 'setup.php'; // Include database connection
-
-//print_r($_SESSION);
-// die(); 
 
 // Check if user is logged in
 if (!$_SESSION['loggedin']) {
@@ -12,11 +8,11 @@ if (!$_SESSION['loggedin']) {
     exit();
 }
 
-if (isset($_SESSION['message'])) {
-    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
-    //die();
-    unset($_SESSION['message']);
-}
+// Set the message for the modal if it exists in the session
+$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+
+// Unset the session message to avoid showing it repeatedly
+unset($_SESSION['message']);
 
 // Check if user account is validated
 //if ($account['activation_code'] == 'activated') {

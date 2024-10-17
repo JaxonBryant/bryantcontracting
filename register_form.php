@@ -132,6 +132,7 @@ if (isset($_SESSION['message'])) {
             </label>
             <input type="text" name="username" placeholder="Username" 
                    pattern="[a-zA-Z0-9_]+" 
+                   minlength="3" maxlength="30"
                    title="Username can only contain letters, numbers, and underscores" 
                    required>
             

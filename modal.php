@@ -1,6 +1,4 @@
-<?php
-session_start(); // Make sure session is started
-?>
+
 
 <!-- Modal structure -->
 <div id="myModal" class="modal">

@@ -13,10 +13,12 @@ if (!$_SESSION['loggedin']) {
 }
 
 if (isset($_SESSION['message'])) {
-    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    //echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    $message = $_SESSION['message'];
     //die();
     unset($_SESSION['message']);
 }
+
 
 $customer_id = $_SESSION['id'];
 
@@ -45,16 +47,14 @@ $stmt->execute();
 $results = $stmt->get_result();
 ?>
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/style.css">
-
 <!DOCTYPE html>
 <html>
-    <div class="wrapper">
+
     <head>
         <title>Customer Dashboard: Bookings</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <?php include 'header.php'; ?>
+        
         <style>
             table {
                 width: 100%;
@@ -74,6 +74,8 @@ $results = $stmt->get_result();
     </head>
     <body>
         <?php include 'modal.php'; ?>
+        <div class="wrapper">
+            <?php include 'header.php'; ?>
         <h1>Your Bookings</h1>
         <br>
         <table>

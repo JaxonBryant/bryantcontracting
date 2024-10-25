@@ -3,8 +3,8 @@
 session_start();
 require 'setup.php'; // Include database connection
 
-//print_r($_SESSION);
-// die(); 
+print_r($_SESSION);
+//die(); 
 
 // Check if user is logged in
 if (!$_SESSION['loggedin']) {

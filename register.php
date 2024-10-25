@@ -5,9 +5,10 @@ session_start();
 include 'setup.php';
 
 // Now we check if the data was submitted, isset() function will check if the data exists.
+// This code should never trigger because of the "required" code in registration_form.php
 if (!isset($_POST['username'], $_POST['password'], $_POST['email'])) {
 	// Could not get the data that should have been sent.
-    $_SESSION["message"] = "error message ?? ";
+    $_SESSION["message"] = "Account registration unresponsive ";
 	 header("Location: register_form.php");
     exit();
 }

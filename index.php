@@ -12,6 +12,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php include 'modal.php'; ?>
     <!-- Apply fonts. The following code is in comment form because IDK how to make it work -->
     
         <!--@import url('https://fonts.googleapis.com/css2 family=Inter:wght@100..900&display=swap');

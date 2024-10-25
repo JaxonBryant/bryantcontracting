@@ -43,6 +43,7 @@ $results = $stmt->get_result();
 <!DOCTYPE html>
 <html>
     <head>
+        <?php include 'modal.php'; ?>
         <div class="wrapper">
         <?php include 'header_admin.php';?>
         <title>Bookings</title>

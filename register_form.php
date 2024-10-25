@@ -4,13 +4,9 @@
 session_start();
     //print_r($_SESSION); //die();
     
-if (isset($_SESSION['message'])) {
-    echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
-    //die();
-    unset($_SESSION['message']);
-}
 ?>
 <head>
+    <?php include 'modal.php'; ?>
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">

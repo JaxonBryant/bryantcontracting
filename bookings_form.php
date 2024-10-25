@@ -9,10 +9,10 @@ if (!$_SESSION['loggedin']) {
 }
 
 // Set the message for the modal if it exists in the session
-$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+//$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
 
 // Unset the session message to avoid showing it repeatedly
-unset($_SESSION['message']);
+//unset($_SESSION['message']);
 
 // Check if user account is validated
 //if ($account['activation_code'] == 'activated') {
@@ -57,6 +57,7 @@ $services_result = $services_stmt->get_result();
 <html>
     <div class="wrapper">
     <head>
+        <?php include 'modal.php'; ?>
         <title>Service Booking</title>
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>

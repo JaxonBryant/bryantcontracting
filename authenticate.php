@@ -34,10 +34,15 @@ if ($stmt = $conn->prepare('SELECT id, password, admin FROM accounts WHERE usern
             }
             exit(); // Ensure no further code runs after the redirect
         } else {
-            echo 'Incorrect username and/or password!';
+            
+            $_SESSION["message"] = 'Incorrect username and/or password!';
+            header("Location: login_form.php");
+            exit();
         }
     } else {
-        echo 'Incorrect username and/or password!';
+        $_SESSION["message"] = 'Incorrect username and/or password!';
+        header("Location: login_form.php");
+        exit();
     }
     $stmt->close();
 }

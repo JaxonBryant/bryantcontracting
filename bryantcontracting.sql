@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 25, 2024 at 12:56 AM
+-- Generation Time: Oct 29, 2024 at 09:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -41,9 +41,16 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`, `activation_code`) VALUES
-(1, 'test', '$2y$10$SfhYIDtn.iOuCW7zfoFLuuZHX6lja4lF4XA4JqNmpiH/.P3zB8JCa', 'test@test.com', 1, ''),
-(3, 'Jaxon', '$2y$10$0U3NHgcscWrjUVZByQq7/OCN4UsXw6hO2y6XB394004OBg1j0V5Ca', 'jbryant18@piopio.school.nz', 0, '66f0b88fd8acf'),
-(4, 'Student', '$2y$10$hjFgw0ektBDxtbQIy3V.tOrFPJQBGRAKZ8JYzlc7xtYCXpQ0FF/Ja', 'student@email.com', 0, '');
+(4, 'Student', '$2y$10$hjFgw0ektBDxtbQIy3V.tOrFPJQBGRAKZ8JYzlc7xtYCXpQ0FF/Ja', 'student@email.com', 0, ''),
+(5, 'JaneDoe', '$2y$10$gTwPfWAsugIaGO0JOemPLeYPFZ8yuCkgDGsTRcaLMFNmRbZAPHJqq', 'Fake@gmail.com', 0, ''),
+(6, 'User11', '$2y$10$c7BAAdlU23P9sBVlbhiTOeORqgoGuVWlPlfq.0BVvOY30JAOiRYwy', 'Test@email.nz', 0, ''),
+(7, 'admin', '$2y$10$WywJ57eDfg880Y26L048M.G8NNywFIgEIBkmRF8j4.3NiFUvv6Hsq', 'admin@bryantcontracting.nz', 1, ''),
+(8, 'use', '$2y$10$c9o.Z1kvuG5SqKAoqy7fIexoiGIunZhK1Fgw3DjoR.CAtdMPNanxy', 'email@email.nz', 0, ''),
+(9, 'user', '$2y$10$5Jo.vEFL.EGPHhZn.ys9eOWNiuU61mjU3WhA7Pen4WUBrFH2/aN0W', 'email@email.nz', 0, ''),
+(10, '12345678', '$2y$10$502bE9j48xRTYdwq5514uuCb3cGMpG6NFYOai48E2uScQXQrvH8ye', 'email@email.nz', 0, ''),
+(11, 'Jaxon', '$2y$10$MF4FscUo7yu1GRfP0R2bd.6Ju9ja6s8n4qB2F0X81A5ogPPOXMMfy', 'Jaxon@email.nz', 0, ''),
+(12, 'Administrator', '$2y$10$DgnxUq97pmAZH7W72caaY.ivcmGSgHw1VB3sbmtJeh.7JeqvovjoW', 'admin@bryantcontracting.nz', 1, ''),
+(13, 'Zachary', '$2y$10$FBV/fvC0v9GE/k5Fs3dWl.yMhns0t6cirAKQF5sLK2tUoN6iG5vCG', 'Zachary@mail.com', 0, '');
 
 -- --------------------------------------------------------
 
@@ -64,7 +71,31 @@ CREATE TABLE `bookings` (
 --
 
 INSERT INTO `bookings` (`id`, `customer_id`, `service_id`, `date_booking`, `created_at`) VALUES
-(3, 4, 5, '2025-03-03', '2024-09-24 22:48:24');
+(3, 4, 5, '2025-03-03', '2024-09-24 22:48:24'),
+(4, 5, 3, '2026-11-11', '2024-09-30 22:16:28'),
+(5, 5, 4, '2025-11-10', '2024-09-30 22:16:47'),
+(6, 7, 1, '2024-10-03', '2024-10-01 22:02:17'),
+(7, 11, 5, '2024-10-31', '2024-10-06 21:34:21'),
+(8, 11, 3, '2024-10-24', '2024-10-06 21:34:41'),
+(9, 11, 1, '2024-11-08', '2024-10-06 21:42:29'),
+(10, 11, 4, '2024-11-14', '2024-10-06 21:47:28'),
+(11, 11, 2, '2024-11-11', '2024-10-17 00:08:26'),
+(12, 11, 1, '2025-02-22', '2024-10-17 20:23:27'),
+(13, 11, 5, '3333-03-31', '2024-10-17 20:27:58'),
+(14, 11, 1, '2222-02-22', '2024-10-17 20:36:49'),
+(15, 11, 3, '2024-11-01', '2024-10-22 20:59:23'),
+(16, 11, 5, '2024-11-01', '2024-10-22 21:06:01'),
+(17, 11, 1, '2024-11-01', '2024-10-22 21:07:13'),
+(18, 11, 1, '2024-11-02', '2024-10-22 21:09:22'),
+(19, 11, 1, '2024-11-03', '2024-10-22 21:10:32'),
+(20, 11, 1, '2024-11-04', '2024-10-22 21:21:23'),
+(21, 12, 1, '2024-10-26', '2024-10-25 01:02:01'),
+(22, 13, 1, '2024-10-23', '2024-10-25 01:08:25'),
+(23, 11, 1, '2024-11-01', '2024-10-25 01:31:21'),
+(24, 11, 1, '2024-10-24', '2024-10-25 01:42:30'),
+(25, 11, 1, '2024-10-24', '2024-10-25 01:56:05'),
+(26, 11, 1, '2024-10-30', '2024-10-28 21:00:31'),
+(27, 12, 1, '2024-11-01', '2024-10-28 21:01:23');
 
 -- --------------------------------------------------------
 
@@ -188,13 +219,13 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `contacts`

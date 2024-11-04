@@ -9,7 +9,12 @@ if (session_status() === PHP_SESSION_NONE) {
 //$_SESSION["message"] = 'Successful';
 
 // Get the message from the session if it exists
-$message = isset($_SESSION['message']) ? $_SESSION['message'] : '';
+if (isset($_SESSION['message'])) {
+    //echo '<p class="error-message">' . $_SESSION['message'] . '</p>';
+    $message = $_SESSION['message'];
+    //die();
+    unset($_SESSION['message']);
+}
 
 // Check if the message is not empty, and if it is then run modal code
 if (!empty($message)): ?>

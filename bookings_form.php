@@ -4,7 +4,7 @@ require 'setup.php'; // Include database connection
 
 // Check if user is logged in
 if (!$_SESSION['loggedin']) {
-    header('Location: login.php');
+    header('Location: login_form.php');
     exit();
 }
 

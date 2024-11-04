@@ -8,7 +8,7 @@ print_r($_SESSION);
 
 // Check if user is logged in
 if (!$_SESSION['loggedin']) {
-    header('Location: login.php');
+    header('Location: login_form.php');
     exit();
 }
 
@@ -18,7 +18,6 @@ if (isset($_SESSION['message'])) {
     //die();
     unset($_SESSION['message']);
 }
-
 
 $customer_id = $_SESSION['id'];
 
@@ -51,6 +50,7 @@ $results = $stmt->get_result();
 <html>
 
     <head>
+        <?php include 'modal.php'; ?>
         <title>Customer Dashboard: Bookings</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -73,7 +73,6 @@ $results = $stmt->get_result();
         </style>
     </head>
     <body>
-        <?php include 'modal.php'; ?>
         <div class="wrapper">
             <?php include 'header.php'; ?>
         <h1>Your Bookings</h1>

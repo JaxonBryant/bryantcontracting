@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2024 at 09:53 PM
+-- Generation Time: Nov 04, 2024 at 05:33 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -50,7 +50,8 @@ INSERT INTO `accounts` (`id`, `username`, `password`, `email`, `admin`, `activat
 (10, '12345678', '$2y$10$502bE9j48xRTYdwq5514uuCb3cGMpG6NFYOai48E2uScQXQrvH8ye', 'email@email.nz', 0, ''),
 (11, 'Jaxon', '$2y$10$MF4FscUo7yu1GRfP0R2bd.6Ju9ja6s8n4qB2F0X81A5ogPPOXMMfy', 'Jaxon@email.nz', 0, ''),
 (12, 'Administrator', '$2y$10$DgnxUq97pmAZH7W72caaY.ivcmGSgHw1VB3sbmtJeh.7JeqvovjoW', 'admin@bryantcontracting.nz', 1, ''),
-(13, 'Zachary', '$2y$10$FBV/fvC0v9GE/k5Fs3dWl.yMhns0t6cirAKQF5sLK2tUoN6iG5vCG', 'Zachary@mail.com', 0, '');
+(13, 'Zachary', '$2y$10$FBV/fvC0v9GE/k5Fs3dWl.yMhns0t6cirAKQF5sLK2tUoN6iG5vCG', 'Zachary@mail.com', 0, ''),
+(14, 'MrD', '$2y$10$pDfwAJHl8y1iTOVVsuQmKOUmoo./OUOJL9t8LYfmbqlvF0EOOA9e6', 'MrD@mail.com', 0, '');
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,14 @@ INSERT INTO `bookings` (`id`, `customer_id`, `service_id`, `date_booking`, `crea
 (24, 11, 1, '2024-10-24', '2024-10-25 01:42:30'),
 (25, 11, 1, '2024-10-24', '2024-10-25 01:56:05'),
 (26, 11, 1, '2024-10-30', '2024-10-28 21:00:31'),
-(27, 12, 1, '2024-11-01', '2024-10-28 21:01:23');
+(27, 12, 1, '2024-11-01', '2024-10-28 21:01:23'),
+(28, 14, 3, '2024-11-01', '2024-10-29 21:00:18'),
+(29, 14, 1, '2024-11-02', '2024-10-29 21:02:46'),
+(30, 14, 1, '2024-11-03', '2024-10-29 21:04:40'),
+(31, 14, 1, '2024-11-04', '2024-10-29 21:05:52'),
+(32, 14, 2, '2024-11-01', '2024-10-29 21:07:01'),
+(33, 11, 1, '2024-11-10', '2024-10-29 21:26:22'),
+(34, 11, 1, '2024-11-10', '2024-10-29 21:32:50');
 
 -- --------------------------------------------------------
 
@@ -219,13 +227,13 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `contacts`

@@ -1,15 +1,14 @@
-if ($_POST['username'] == 'admin') { header('Location: admin.php');}
-			else { header('Location: index.php');}
+
 <?php
+
 session_start();
+
 // Redirect to login page if user is not logged in
-if (!isset($_SESSION['loggedin'])) {
+if (!isset($_SESSION['loggedin']) or ($_SESSION['admin'] != 1) ) {
     header('Location: login_form.php');
     exit;
 }
-?>
 
-<?php
 // Include the database configuration file
 include 'setup.php';
 // Fetch the page details if the ID is set
@@ -37,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           title2='$title2', text2='$text2', image2='$image2', title3='$title3', text3='$text3', image3='$image3' WHERE id=$id";
   if ($conn->query($sql) === TRUE) {
     echo "Page updated successfully";
+      header('location: admin.php');
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
@@ -46,8 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
 <!DOCTYPE html>
-
-  <style>
+<html>
+<head>
+  <title>Edit Page</title>
+      <style>
     body {
       font-family: Arial, sans-serif;
       max-width: 800px;
@@ -101,12 +103,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       background-color: #45a049;
     }
   </style>
-
-<html>
-<head>
-  <title>Edit Page</title>
 </head>
 <body>
+    <div class="wrapper">
+    <?php include 'header_admin.php';?>
     <h1>Edit Page</h1>
     <form method="post" action="edit_page.php">
         <input type="hidden" name="id" value="<?php echo $page['id']; ?>">

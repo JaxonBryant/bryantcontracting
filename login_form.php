@@ -6,23 +6,14 @@
     <title>Login</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* Reset and global styles */
-        * {
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
+    
         body {
             background-color: #435165;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
             height: 100vh;
             margin: 0;
         }
-
+        
         .login {
             width: 100%;
             max-width: 400px;
@@ -103,9 +94,11 @@
         .register a:hover {
             text-decoration: underline;
         }
-    </style>
+</style>
+    
 </head>
 <body>
+    <?php include 'header_admin.php';?>
     <div class="login">
         <h1>Login</h1>
         <form action="authenticate.php" method="post">
